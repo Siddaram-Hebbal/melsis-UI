@@ -1,0 +1,24 @@
+<!-- <div class="alert alert-info">Now below load multiple views i am from <b class="badge">uirouter.html</b> which is  set by <		i class="badge"> ng-view</i> 
+</div> -->
+ 
+	
+<!-- when controller set then in scope home.template home.html set and it will load that template-->
+<div ng-if="isAdmin" >
+	<!-- <i class="badge">load Admin.html file by ng-include </i>
+	<br/>	 -->
+	<div class="alert bg-success" ng-include="template.admin"></div>
+</div>
+
+<div ng-if="isParent" >
+	<i class="badge">load Parent.html file by ng-include </i>
+	<br/>
+	<!-- when controller set then in scope about.template aboutus.html set and it will load that template-->
+	<div class="alert bg-warning" ng-include="template.parent"></div>
+</div>
+ 
+ <div ng-if="isStaff" >
+ 	<i class="badge">load STAFF.html file by ng-include</i>
+	<br/>
+	<!-- when controller set then in scope contact.template contactus.html set and it will load that template-->
+	<div class="alert bg-danger" ng-include="template.staff"></div>
+ </div>
