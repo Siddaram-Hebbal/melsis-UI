@@ -41,8 +41,13 @@
                 controller: 'ForgotController',
                 templateUrl: 'forgotPassword/forgot.view.html',
                 controllerAs: 'vm'
+            })
+            .when('/addStaff', {
+                controller: 'AddStaffController',
+                templateUrl: 'staff/addStaff.view.html',
+                controllerAs: 'vm'
             })    
-            .otherwise({ redirectTo: '/login' });
+                        .otherwise({ redirectTo: '/login' });
     }
 
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
@@ -65,7 +70,7 @@ Implement a listener on the $locationChangeStart event to track the change in ur
 */
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in and trying to access a restricted page
-            var restrictedPage = $.inArray($location.path(), ['/login', '/register','/forgot','/routeSid']) === -1;
+            var restrictedPage = $.inArray($location.path(), ['/login', '/register','/forgot','/routeSid','/addStaff']) === -1;
             var loggedIn = $rootScope.globals.currentUser;
             if (restrictedPage && !loggedIn) {
                 $location.path('/login');
