@@ -2,12 +2,12 @@
     'use strict';
 
     angular
-        .module('app', ['ngRoute', 'ngCookies'])
+        .module('app', ['ngRoute', 'ngCookies','ui.router'])
         .config(config)
         .run(run);
 
-    config.$inject = ['$routeProvider', '$locationProvider'];
-    function config($routeProvider, $locationProvider) {
+    config.$inject = ['$routeProvider', '$locationProvider','$stateProvider'];
+    function config($routeProvider, $locationProvider,$stateProvider) {
         $routeProvider
             .when('/', {
                 controller: 'HomeController',
@@ -43,6 +43,16 @@
                 controllerAs: 'vm'
             })    
             .otherwise({ redirectTo: '/login' });
+
+            $stateProvider
+            .state('addStaff', {
+              templateUrl: 'staff/addStaff.html',
+              controller : 'StaffController'
+            })
+            .state('viewStaff', {
+              templateUrl: 'staff/viewStaff.html',
+              controller : 'StaffController'
+            });
     }
 
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];

@@ -3,14 +3,15 @@
 		<div class="col-md-12 column">
 			<div class="row clearfix">
 				<div class="col-md-2 column">
-					<img alt="140x140" src="images/adminDB.png" />
+					<img alt="140x140" height="150" width="150" src="images/adminDB.png" />
 				</div>
-				<div class="col-md-10 column">
+				<div class="col-md-10 column text-center">
 					<h1>
 						Admin Dashboard
 					</h1>
 				</div>
 			</div>
+			
 			<div class="row clearfix">
 				<div class="col-md-3 column">
 					<div class="panel-group" id="panel-724555">
@@ -21,10 +22,10 @@
 							<div id="panel-element-857742" class="panel-collapse collapse">
 								<div class="panel-body">
 									<ul>
-										<li><a href="">Add </a></li>
-										<li><a href="">Modify </a></li>
+										<li><a ui-sref="addStaff">Add staff</a></li>
+										<li><a ui-sref="viewStaff">View  </a></li>
 										<li><a href="">Delete </a></li>
-										<li><a href="">View </a></li>
+										<li><a href="">Modify</a></li>
 									</ul>
 								</div>
 							</div>
@@ -77,7 +78,10 @@
 					</div>
 				</div>
 				<div class="col-md-9 column">
-					<div class="row">
+					<div class="row clearfix">
+						<section >
+							<ui-view>
+								<div class="row">
             <div class="col-xs-3">
                 <div class="thumbnail">
                     <img src="images/avatar.png" alt="Sample Image">
@@ -162,7 +166,13 @@
             </div>
         </div>
 				</div>
+							</ui-view>
+						</section>
+					</div>
+
+
+		
+				</div>
 			</div>
 		</div>
-	</div>
 </div>
