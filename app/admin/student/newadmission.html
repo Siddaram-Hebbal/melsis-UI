@@ -1,0 +1,115 @@
+ <div class="panel panel-default" ng-controller="AdminStudController">
+        <!-- Default panel contents -->
+    <div class="panel-heading">Add New Student</div>
+        <div class="panel-body">
+            <div class="">
+            	 <h1>Add Student Details
+                    <br>
+                    <small>{{title}}</small>
+                 </h1>
+                <form name="form" class="form-horizontal" ng-submit="vm.newStudentAdmission()" >
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="firstName">First Name:</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="firstName" ng-model="vm.firstName"  placeholder="First Name">
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="control-label col-xs-3" for="MiddleName">Middle Name:</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="MiddleName" ng-model="vm.middleName"  placeholder="Middle Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="lastName">Last Name:</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="lastName" ng-model="vm.lastName"  placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Gender:</label>
+                        <div class="col-xs-2">
+                            <label class="radio-inline">
+                                <input type="radio" name="genderRadios"  value="male"> Male
+                            </label>
+                        </div>
+
+                        <div class="col-xs-2">
+                            <label class="radio-inline">
+                                <input type="radio" name="genderRadios" value="female"> Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" >Date of Birth:</label>
+                        <div class="col-xs-9">
+                            <div class="col-xs-9">
+                                <input type="text" class="form-control" id="dob" ng-model="vm.dob"  placeholder="22-12-1996">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="postalAddress">Address1:</label>
+                        <div class="col-xs-9">vc
+                            <textarea rows="3" class="form-control" id="postalAddress1" ng-model="vm.postalAddress1"  placeholder="Home Address"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="postalAddress">Address2:</label>
+                        <div class="col-xs-9">
+                            <textarea rows="3" class="form-control" id="postalAddress2" ng-model="vm.postalAddress2"  placeholder="Office Address"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="phoneNumber">Phone:</label>
+                        <div class="col-xs-9">
+                            <input type="tel" class="form-control" id="phoneNumber" ng-model="vm.phoneNumber"  placeholder="Phone Number">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="inputEmail">Email:</label>
+                        <div class="col-xs-9">
+                            <input type="email" class="form-control" id="inputEmail" ng-model="vm.inputEmail"  placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="inputcity">City:</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="city" ng-model="vm.city"  placeholder="City">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="inputsate">State:</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="State" ng-model="vm.state"  placeholder="State">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">User Type:</label>
+                        <div class="col-xs-3">
+                            <select class="form-control" ng-model="vm.role" >
+                                <option>-- Select --</option>
+                                <option>Admin</option>
+                                <option>Student</option>
+                                <option>Staff</option>
+                                <option>Guardian</option>
+                                <option>Librarian</option>
+                            </select>
+                        </div>
+                    </div>
+                 
+                    <br>
+                    <div class="form-actions">
+                        <div class="col-xs-offset-3 col-xs-9">
+                        <button type="submit" class="btn btn-primary">enter Student</button>
+
+                            <input type="reset" class="btn btn-default" value="Reset">
+                        </div>
+                    </div>
+                </form>
+            </div>
+</div>
+</div>
+</div>

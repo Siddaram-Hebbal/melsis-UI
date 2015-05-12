@@ -3,7 +3,7 @@
     <div class="panel-heading">Add Staff Information</div>
         <div class="panel-body">
             <div class="">
-            	 <h1>Add Staff
+                 <h1>Add Staff
                     <br>
                     <small>{{title}}</small>
                  </h1>
@@ -11,7 +11,7 @@
                     <div class="form-group">
                         <label class="control-label col-xs-3" for="inputEmail">Email:</label>
                         <div class="col-xs-9">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="{{staffUser.email}}">
                         </div>
                     </div>
                    <!--  <div class="form-group">
@@ -29,19 +29,19 @@
                     <div class="form-group">
                         <label class="control-label col-xs-3" for="firstName">First Name:</label>
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                            <input type="text" class="form-control" id="firstName" placeholder="{{staffUser.firstName}}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-xs-3" for="lastName">Last Name:</label>
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                            <input type="text" class="form-control" id="lastName" placeholder="{{staffUser.lastName}}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-xs-3" for="phoneNumber">Phone:</label>
                         <div class="col-xs-9">
-                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="{{staffUser.phone}}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -65,13 +65,13 @@
                     <div class="form-group">
                         <label class="control-label col-xs-3" for="postalAddress">Address:</label>
                         <div class="col-xs-9">
-                            <textarea rows="3" class="form-control" id="postalAddress" placeholder="Postal Address"></textarea>
+                            <textarea rows="3" class="form-control" id="postalAddress" placeholder="{{staffUser.address}}"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-xs-3" for="ZipCode">Zip Code:</label>
                         <div class="col-xs-9">
-                            <input type="text" class="form-control" id="ZipCode" placeholder="Zip Code">
+                            <input type="text" class="form-control" id="ZipCode" placeholder="{{staffUser.zipcode}}">
                         </div>
                     </div>
                     <div class="form-group">

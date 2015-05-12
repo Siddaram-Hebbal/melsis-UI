@@ -3,22 +3,20 @@
  
 	
 <!-- when controller set then in scope home.template home.html set and it will load that template-->
-<div ng-if="isAdmin" >
+<div ng-if="isAdmin" class="container" >
 	<!-- <i class="badge">load Admin.html file by ng-include </i>
 	<br/>	 -->
-	<div class="alert bg-success" ng-include="template.admin"></div>
+	<div class="alert bg-success row" ng-include="template.admin"></div>
 </div>
 
-<div ng-if="isParent" >
-	<i class="badge">load Parent.html file by ng-include </i>
-	<br/>
+<div ng-if="isParent"  class="container">
+	
 	<!-- when controller set then in scope about.template aboutus.html set and it will load that template-->
-	<div class="alert bg-warning" ng-include="template.parent"></div>
+	<div class="alert bg-warning row" ng-include="template.parent"></div>
 </div>
  
- <div ng-if="isStaff" >
- 	<i class="badge">load STAFF.html file by ng-include</i>
-	<br/>
+ <div ng-if="isStaff"  class="container">
+ 	
 	<!-- when controller set then in scope contact.template contactus.html set and it will load that template-->
-	<div class="alert bg-danger" ng-include="template.staff"></div>
+	<div class="alert bg-danger row" ng-include="template.staff"></div>
  </div>

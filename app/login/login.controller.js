@@ -10,7 +10,7 @@
         var vm = this;
         $scope.UserDetails = UserDetails; 
         vm.login = login;
-        $rootScope.type='';
+      
         (function initController() {
             // reset login status
             AuthenticationService.ClearCredentials();
@@ -26,8 +26,7 @@
                         $scope.setSomeData(response.type);
                       //  UserDetails.setData(response.type);
                         UserDetails.create('1',response.type);
-                         $location.path('/routeSid');
-                  
+                        $location.path('/routeSid');
                 } else {
                     FlashService.Error(response.message);
                     vm.dataLoading = false;

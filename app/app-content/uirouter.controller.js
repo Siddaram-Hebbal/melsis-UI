@@ -31,7 +31,7 @@
         })();
 
         $scope.template = {
-    "admin": "app-content/adminDashboard.html",
+    "admin": "admin/adminDashboard.html",
     "parent": "app-content/parentDashboard.html",
     "staff": "app-content/staffDashboard.html"
   }

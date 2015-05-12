@@ -17,11 +17,8 @@
             .when('/routeSid', {
                  controller: 'UiSidController',
                  templateUrl: 'app-content/uirouter.html',
-               
-                controllerAs: 'vm'
+                 controllerAs: 'vm'
             })
-
-
             .when('/login', {
                 controller: 'LoginController',
                 templateUrl: 'login/login.view.html',
@@ -32,11 +29,7 @@
                 controller: 'RegisterController',
                 templateUrl: 'register/register.view.html',
                 controllerAs: 'vm'
-            }).when('/adminDashboard', {
-               // controller: 'ForgotController',
-                templateUrl: 'adminDashboard/adminDashboard.view.html',
-                controllerAs: 'vm'
-            })  
+            }) 
             .when('/forgot', {
                 controller: 'ForgotController',
                 templateUrl: 'forgotPassword/forgot.view.html',
@@ -46,12 +39,25 @@
 
             $stateProvider
             .state('addStaff', {
-              templateUrl: 'staff/addStaff.html',
+              templateUrl: 'admin/staff/addStaff.html',
               controller : 'StaffController'
             })
             .state('viewStaff', {
-              templateUrl: 'staff/viewStaff.html',
+              templateUrl: 'admin/staff/viewStaff.html',
               controller : 'StaffController'
+            })
+            .state('adminHome', {
+              templateUrl: 'admin/adminHome.html'
+              //controller : 'StaffController'
+            })
+             .state('addVehicle', {
+              templateUrl: 'admin/transportation/addVehicle.html'
+              //controller : 'StaffController'
+            })
+              .state('addstudent', {
+              templateUrl: 'admin/student/newadmission.html',
+              controller : 'AdminStudController',
+              controllerAs: 'vm'
             });
     }
 
